@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoFix Pro – Uw Specialist in Autoreparatie & Onderhoud</title>
+  <meta name="description" content="AutoFix Pro is uw betrouwbare automonteur voor APK, onderhoud, reparaties en airco service. Snel, eerlijk en professioneel. Maak nu een afspraak." />
+
+  <!-- SEO / Open Graph -->
+  <meta property="og:title" content="AutoFix Pro – Uw Specialist in Autoreparatie & Onderhoud" />
+  <meta property="og:description" content="Professionele garage in Amsterdam. APK, onderhoud, reparaties en airco service. 4.9/5 sterren. 15 jaar ervaring." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1625047509252-ab38fb5c7343?w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AutoFix Pro – Autoreparatie & Onderhoud" />
+  <meta name="theme-color" content="#FF6B00" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF6B00'/><text y='.9em' font-size='80' x='10'>⚙️</text></svg>" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "AutoFix Pro",
+    "description": "Professionele garage voor APK, onderhoud, reparaties en airco service",
+    "telephone": "+31201234567",
+    "email": "info@autofixpro.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Garagelaan 12",
+      "addressLocality": "Amsterdam",
+      "postalCode": "1234 AB",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "14:00" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "340" },
+    "priceRange": "€€"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Skip to content for accessibility -->
+  <a href="#diensten" class="skip-link">Ga naar inhoud</a>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span><i class="fa-solid fa-phone"></i> <a href="tel:+31201234567">020 – 123 45 67</a></span>
+        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@autofixpro.nl">info@autofixpro.nl</a></span>
+      </div>
+      <div class="topbar__right">
+        <span><i class="fa-solid fa-clock"></i> Ma–Vr: 08:00–18:00 | Za: 09:00–14:00</span>
+        <div class="topbar__socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <span class="logo__icon"><i class="fa-solid fa-gear"></i></span>
+        <div class="logo__text">
+          <span class="logo__name">AutoFix Pro</span>
+          <span class="logo__tagline">Autoreparatie & Onderhoud</span>
+        </div>
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#diensten" class="nav-link">Diensten</a></li>
+        <li><a href="#over-ons" class="nav-link">Over Ons</a></li>
+        <li><a href="#prijzen" class="nav-link">Prijzen</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#afspraak" class="btn btn--nav">Afspraak Maken</a></li>
+      </ul>
+      <button class="navbar__toggle" id="navToggle" aria-label="Menu openen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+      <img src="https://images.unsplash.com/photo-1625047509252-ab38fb5c7343?w=1920&q=80&auto=format&fit=crop" alt="AutoFix Pro garage" class="hero__img" loading="eager" />
+    </div>
+    <div class="container hero__content">
+      <div class="hero__badge reveal-up">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>APK Erkend Bedrijf</span>
+      </div>
+      <h1 class="hero__title reveal-up">
+        Uw Auto in Beste<br />
+        <span class="gradient-text">Handen</span>
+      </h1>
+      <p class="hero__sub reveal-up">
+        Professioneel, eerlijk en transparant. Bij AutoFix Pro combineren we jarenlange vakkennis met de nieuwste apparatuur — voor elke auto, elk probleem.
+      </p>
+      <div class="hero__actions reveal-up">
+        <a href="#afspraak" class="btn btn--primary btn--lg">
+          <i class="fa-solid fa-calendar-check"></i>
+          Afspraak Maken
+        </a>
+        <a href="#diensten" class="btn btn--outline btn--lg">
+          <i class="fa-solid fa-arrow-down"></i>
+          Onze Diensten
+        </a>
+      </div>
+      <div class="hero__trust reveal-up">
+        <div class="trust-item">
+          <i class="fa-solid fa-star"></i>
+          <span><strong>4.9/5</strong> op Google</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="fa-solid fa-car"></i>
+          <span><strong>3.500+</strong> tevreden klanten</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="fa-solid fa-trophy"></i>
+          <span><strong>15 jaar</strong> ervaring</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== BRANDS STRIP ===== -->
+  <section class="brands">
+    <div class="container brands__inner">
+      <span class="brands__label">Wij werken met & voor alle merken</span>
+      <div class="brands__logos">
+        <div class="brand-item" title="Volkswagen"><i class="fa-brands fa-volkswagen"></i><span>Volkswagen</span></div>
+        <div class="brand-item" title="BMW"><span class="brand-text">BMW</span></div>
+        <div class="brand-item" title="Mercedes"><span class="brand-text">Mercedes</span></div>
+        <div class="brand-item" title="Audi"><span class="brand-text">Audi</span></div>
+        <div class="brand-item" title="Toyota"><span class="brand-text">Toyota</span></div>
+        <div class="brand-item" title="Ford"><span class="brand-text">Ford</span></div>
+        <div class="brand-item" title="Opel"><span class="brand-text">Opel</span></div>
+        <div class="brand-item" title="Peugeot"><span class="brand-text">Peugeot</span></div>
+      </div>
+      <div class="brands__certs">
+        <div class="cert-badge"><i class="fa-solid fa-certificate"></i><span>RDW Erkend</span></div>
+        <div class="cert-badge"><i class="fa-solid fa-shield-halved"></i><span>Bosch Service</span></div>
+        <div class="cert-badge"><i class="fa-solid fa-leaf"></i><span>EV Gecertificeerd</span></div>
+        <div class="cert-badge"><i class="fa-solid fa-star"></i><span>BOVAG Partner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats" id="stats">
+    <div class="container stats__grid">
+      <div class="stat-card reveal-up">
+        <span class="stat-number" data-target="3500">0</span><span class="stat-suffix">+</span>
+        <p class="stat-label">Tevreden Klanten</p>
+      </div>
+      <div class="stat-card reveal-up">
+        <span class="stat-number" data-target="15">0</span><span class="stat-suffix">jr</span>
+        <p class="stat-label">Vakervaring</p>
+      </div>
+      <div class="stat-card reveal-up">
+        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+        <p class="stat-label">Klanttevredenheid</p>
+      </div>
+      <div class="stat-card reveal-up">
+        <span class="stat-number" data-target="24">0</span><span class="stat-suffix">u</span>
+        <p class="stat-label">Gemiddelde Doorlooptijd</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIENSTEN ===== -->
+  <section class="diensten section" id="diensten">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Wat wij doen</span>
+        <h2 class="section-title">Onze <span class="gradient-text">Diensten</span></h2>
+        <p class="section-sub">Van snelle service tot complexe reparaties — wij hebben de kennis en middelen voor iedere klus.</p>
+      </div>
+      <div class="diensten__grid">
+
+        <div class="dienst-card reveal-up">
+          <div class="dienst-card__icon">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <div class="dienst-card__badge">Erkend RDW</div>
+          <h3>APK Keuring</h3>
+          <p>Officiële APK keuring door gecertificeerde monteurs. Snel resultaat, eerlijk advies en direct inplannen bij afkeuring.</p>
+          <ul class="dienst-card__features">
+            <li><i class="fa-solid fa-check"></i> Resultaat dezelfde dag</li>
+            <li><i class="fa-solid fa-check"></i> RDW erkend station</li>
+            <li><i class="fa-solid fa-check"></i> Gratis herbeoordeling</li>
+          </ul>
+          <a href="#afspraak" class="dienst-card__link">Afspraak plannen <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="dienst-card reveal-up">
+          <div class="dienst-card__icon">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3>Onderhoud & Service</h3>
+          <p>Grote en kleine beurten voor alle merken en modellen. Wij gebruiken uitsluitend kwaliteitsonderdelen tegen scherpe prijzen.</p>
+          <ul class="dienst-card__features">
+            <li><i class="fa-solid fa-check"></i> Kleine & grote beurt</li>
+            <li><i class="fa-solid fa-check"></i> Olie & filterwissel</li>
+            <li><i class="fa-solid fa-check"></i> Bandenwissel & balanceren</li>
+          </ul>
+          <a href="#afspraak" class="dienst-card__link">Afspraak plannen <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="dienst-card reveal-up">
+          <div class="dienst-card__icon">
+            <i class="fa-solid fa-engine"></i>
+          </div>
+          <h3>Reparaties</h3>
+          <p>Van motorstoring tot remmen en uitlaat — onze monteurs diagnosticeren snel en repareren vakkundig elk probleem.</p>
+          <ul class="dienst-card__features">
+            <li><i class="fa-solid fa-check"></i> Gratis diagnose scan</li>
+            <li><i class="fa-solid fa-check"></i> Remmen & schokdempers</li>
+            <li><i class="fa-solid fa-check"></i> Motor & aandrijving</li>
+          </ul>
+          <a href="#afspraak" class="dienst-card__link">Afspraak plannen <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="dienst-card reveal-up">
+          <div class="dienst-card__icon">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <h3>Airco Service</h3>
+          <p>Airco lektest, vullen, ontsmetten en repareren. Rijdt u met frisse koude lucht de zomer in — ook voor elektrische auto's.</p>
+          <ul class="dienst-card__features">
+            <li><i class="fa-solid fa-check"></i> Lektest & vulling</li>
+            <li><i class="fa-solid fa-check"></i> Ontsmetting systeem</li>
+            <li><i class="fa-solid fa-check"></i> Geschikt voor EV's</li>
+          </ul>
+          <a href="#afspraak" class="dienst-card__link">Afspraak plannen <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="dienst-card reveal-up">
+          <div class="dienst-card__icon">
+            <i class="fa-solid fa-car-battery"></i>
+          </div>
+          <h3>Elektrisch & Hybrid</h3>
+          <p>Gecertificeerd voor hybride en elektrische voertuigen. Van accucheck tot HV-systeem diagnose — wij zijn de toekomst voor.</p>
+          <ul class="dienst-card__features">
+            <li><i class="fa-solid fa-check"></i> Accu diagnose & test</li>
+            <li><i class="fa-solid fa-check"></i> HV-systeem service</li>
+            <li><i class="fa-solid fa-check"></i> Software updates</li>
+          </ul>
+          <a href="#afspraak" class="dienst-card__link">Afspraak plannen <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="dienst-card reveal-up">
+          <div class="dienst-card__icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h3>Aankoopkeuring</h3>
+          <p>Wil u een gebruikte auto kopen? Onze technische aankoopkeuring beschermt u tegen verborgen gebreken en onaangename verrassingen.</p>
+          <ul class="dienst-card__features">
+            <li><i class="fa-solid fa-check"></i> Volledig technisch rapport</li>
+            <li><i class="fa-solid fa-check"></i> Carrosserie inspectie</li>
+            <li><i class="fa-solid fa-check"></i> Kentekenoverzicht</li>
+          </ul>
+          <a href="#afspraak" class="dienst-card__link">Afspraak plannen <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="why-us section section--dark" id="over-ons">
+    <div class="container why-us__inner">
+      <div class="why-us__visual reveal-left">
+        <img src="https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=800&q=80&auto=format&fit=crop" alt="Monteur aan het werk" class="why-us__img" loading="lazy" />
+        <div class="why-us__badge-float">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <strong>12 Maanden</strong>
+            <span>Garantie op alle reparaties</span>
+          </div>
+        </div>
+      </div>
+      <div class="why-us__content reveal-right">
+        <span class="section-tag section-tag--light">Waarom AutoFix Pro?</span>
+        <h2 class="section-title">Meer dan alleen <span class="gradient-text">een garage</span></h2>
+        <p class="why-us__intro">Wij geloven dat eerlijkheid en vakmanschap hand in hand gaan. Bij ons betaalt u geen verrassingen — alleen eerlijke prijzen en degelijk werk.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-item__icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <h4>Transparante Prijzen</h4>
+              <p>U weet vooraf wat u betaalt. Geen verborgen kosten, geen onaangename verrassingen op de factuur.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <h4>Gecertificeerde Monteurs</h4>
+              <p>Ons team volgt continu trainingen voor de nieuwste autotechnologie, inclusief elektrische en hybride voertuigen.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h4>Snelle Service</h4>
+              <p>We respecteren uw tijd. Kleine reparaties dezelfde dag, grote klussen altijd met duidelijke planning en updates.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>12 Maanden Garantie</h4>
+              <p>Alle reparaties en vervangen onderdelen krijgen 12 maanden garantie. Uw gemoedsrust staat bij ons voorop.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#afspraak" class="btn btn--primary btn--lg" style="margin-top:2rem;">
+          <i class="fa-solid fa-calendar-check"></i>
+          Gratis Adviesgesprek
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process section" id="werkwijze">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Hoe werkt het?</span>
+        <h2 class="section-title">Onze <span class="gradient-text">Werkwijze</span></h2>
+        <p class="section-sub">Eenvoudig, transparant en zonder gedoe — zo regelen we uw autoservice.</p>
+      </div>
+      <div class="process__steps">
+        <div class="process-step reveal-up">
+          <div class="process-step__num">01</div>
+          <div class="process-step__icon"><i class="fa-solid fa-calendar-plus"></i></div>
+          <h3>Afspraak Maken</h3>
+          <p>Plan eenvoudig online, telefonisch of via WhatsApp. U krijgt direct bevestiging.</p>
+        </div>
+        <div class="process-step__arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="process-step reveal-up">
+          <div class="process-step__num">02</div>
+          <div class="process-step__icon"><i class="fa-solid fa-car"></i></div>
+          <h3>Auto Inbrengen</h3>
+          <p>Breng uw auto op het afgesproken tijdstip. We nemen de auto meteen aan en beginnen direct.</p>
+        </div>
+        <div class="process-step__arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="process-step reveal-up">
+          <div class="process-step__num">03</div>
+          <div class="process-step__icon"><i class="fa-solid fa-file-invoice"></i></div>
+          <h3>Offerte & Akkoord</h3>
+          <p>U ontvangt een duidelijke offerte. We starten pas na uw goedkeuring — geen verrassingen.</p>
+        </div>
+        <div class="process-step__arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="process-step reveal-up">
+          <div class="process-step__num">04</div>
+          <div class="process-step__icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Klaar & Ophalen</h3>
+          <p>U wordt gebeld zodra de auto klaar is. Betaal veilig en rij weg met garantie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIJZEN ===== -->
+  <section class="pricing section section--gray" id="prijzen">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Eerlijke prijzen</span>
+        <h2 class="section-title">Onze <span class="gradient-text">Tarieven</span></h2>
+        <p class="section-sub">Transparante vaste prijzen voor onze meest gevraagde diensten. Alle prijzen zijn inclusief BTW.</p>
+      </div>
+      <div class="pricing__grid">
+
+        <div class="pricing-card reveal-up">
+          <div class="pricing-card__header">
+            <i class="fa-solid fa-clipboard-check pricing-icon"></i>
+            <h3>APK Keuring</h3>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price-from">vanaf</span>
+            <span class="price-amount">€49</span>
+            <span class="price-period">per keuring</span>
+          </div>
+          <ul class="pricing-card__list">
+            <li><i class="fa-solid fa-check"></i> Officiële RDW keuring</li>
+            <li><i class="fa-solid fa-check"></i> Resultaat dezelfde dag</li>
+            <li><i class="fa-solid fa-check"></i> Gratis herbeoordeling</li>
+            <li><i class="fa-solid fa-check"></i> Digitaal rapport</li>
+          </ul>
+          <a href="#afspraak" class="btn btn--primary">Afspraak Maken</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured reveal-up">
+          <div class="pricing-card__ribbon">Meest Gekozen</div>
+          <div class="pricing-card__header">
+            <i class="fa-solid fa-screwdriver-wrench pricing-icon"></i>
+            <h3>Kleine Beurt</h3>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price-from">vanaf</span>
+            <span class="price-amount">€89</span>
+            <span class="price-period">inclusief materiaal</span>
+          </div>
+          <ul class="pricing-card__list">
+            <li><i class="fa-solid fa-check"></i> Olie & oliefilter wissel</li>
+            <li><i class="fa-solid fa-check"></i> Remvloeistof check</li>
+            <li><i class="fa-solid fa-check"></i> Bandenspanning controle</li>
+            <li><i class="fa-solid fa-check"></i> 30-punten inspectie</li>
+            <li><i class="fa-solid fa-check"></i> OBD diagnose scan</li>
+          </ul>
+          <a href="#afspraak" class="btn btn--primary">Afspraak Maken</a>
+        </div>
+
+        <div class="pricing-card reveal-up">
+          <div class="pricing-card__header">
+            <i class="fa-solid fa-gear pricing-icon"></i>
+            <h3>Grote Beurt</h3>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price-from">vanaf</span>
+            <span class="price-amount">€189</span>
+            <span class="price-period">inclusief materiaal</span>
+          </div>
+          <ul class="pricing-card__list">
+            <li><i class="fa-solid fa-check"></i> Alles van kleine beurt</li>
+            <li><i class="fa-solid fa-check"></i> Lucht- & pollenfilter</li>
+            <li><i class="fa-solid fa-check"></i> Bougies vervangen</li>
+            <li><i class="fa-solid fa-check"></i> Transmissievloeistof</li>
+            <li><i class="fa-solid fa-check"></i> Volledige inspectie rapport</li>
+          </ul>
+          <a href="#afspraak" class="btn btn--primary">Afspraak Maken</a>
+        </div>
+
+        <div class="pricing-card reveal-up">
+          <div class="pricing-card__header">
+            <i class="fa-solid fa-snowflake pricing-icon"></i>
+            <h3>Airco Service</h3>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price-from">vanaf</span>
+            <span class="price-amount">€69</span>
+            <span class="price-period">per behandeling</span>
+          </div>
+          <ul class="pricing-card__list">
+            <li><i class="fa-solid fa-check"></i> Lektest systeem</li>
+            <li><i class="fa-solid fa-check"></i> Koudemiddel vulling</li>
+            <li><i class="fa-solid fa-check"></i> Ontsmetting interieur</li>
+            <li><i class="fa-solid fa-check"></i> Werking & temp. test</li>
+          </ul>
+          <a href="#afspraak" class="btn btn--primary">Afspraak Maken</a>
+        </div>
+
+      </div>
+      <p class="pricing__note reveal-up"><i class="fa-solid fa-circle-info"></i> Prijzen zijn richtprijzen. Exacte prijs wordt bepaald na inspectie. Altijd een offerte voor we beginnen.</p>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Wat klanten zeggen</span>
+        <h2 class="section-title">Onze <span class="gradient-text">Reviews</span></h2>
+        <div class="reviews__overall">
+          <div class="stars-large">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span>4.9 / 5 — gebaseerd op 340+ Google reviews</span>
+        </div>
+      </div>
+      <div class="reviews__grid">
+
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-card__text">"Eindelijk een garage die niet om de tuin leidt! Alles werd netjes uitgelegd, de prijs was precies wat ze zeiden, en de auto was de volgende ochtend al klaar. Echt een aanrader."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">MV</div>
+            <div>
+              <strong>Mark van der Berg</strong>
+              <span>Volkswagen Golf eigenaar</span>
+            </div>
+            <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google review" class="review-card__platform" />
+          </div>
+        </div>
+
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-card__text">"Mijn auto had een rare storing die twee andere garages niet konden vinden. AutoFix Pro had het binnen een uur gevonden en dezelfde dag gerepareerd. Geweldige service!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">SJ</div>
+            <div>
+              <strong>Sandra Jansen</strong>
+              <span>BMW 3-serie eigenaar</span>
+            </div>
+            <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google review" class="review-card__platform" />
+          </div>
+        </div>
+
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-card__text">"APK keuring snel geregeld, vriendelijk personeel en een duidelijk rapport. Bovendien werd een potentieel gevaarlijk probleem aan mijn remmen ontdekt. Dat heeft me mogelijk veel ellende bespaard!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">TH</div>
+            <div>
+              <strong>Thomas Hendriks</strong>
+              <span>Audi A4 eigenaar</span>
+            </div>
+            <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google review" class="review-card__platform" />
+          </div>
+        </div>
+
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-card__text">"Airco laten vullen en ontsmetten. Binnen een uur klaar en een scherpe prijs. De monteur nam de tijd om alles uit te leggen. Ik ga hier zeker vaker heen!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">LK</div>
+            <div>
+              <strong>Lisa Kuipers</strong>
+              <span>Toyota Yaris eigenaar</span>
+            </div>
+            <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google review" class="review-card__platform" />
+          </div>
+        </div>
+
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-card__text">"Mijn hybride auto werd bij andere garages geweigerd, maar AutoFix Pro heeft de kennis en apparatuur om ook elektrische systemen te behandelen. Dankzij hen rijd ik weer veilig!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">RB</div>
+            <div>
+              <strong>Remco de Boer</strong>
+              <span>Toyota Prius eigenaar</span>
+            </div>
+            <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google review" class="review-card__platform" />
+          </div>
+        </div>
+
+        <div class="review-card reveal-up">
+          <div class="review-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-card__text">"Aankoopkeuring laten doen voor een occasion. Heel grondig rapport, paar problemen gevonden die de verkoper niet noemde. Geld goed besteed — ze hebben me duizenden euro's bespaard!"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">NW</div>
+            <div>
+              <strong>Nathalie Willems</strong>
+              <span>Particulier koper</span>
+            </div>
+            <img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google review" class="review-card__platform" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AFSPRAAK ===== -->
+  <section class="appointment section section--dark" id="afspraak">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag section-tag--light">Direct plannen</span>
+        <h2 class="section-title">Maak een <span class="gradient-text">Afspraak</span></h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.7);">Vul het formulier in en wij nemen binnen 2 uur contact met u op om uw afspraak te bevestigen.</p>
+      </div>
+      <div class="appointment__inner">
+        <form class="appointment-form reveal-left" id="appointmentForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="naam">Naam *</label>
+              <input type="text" id="naam" name="naam" placeholder="Jan de Vries" required autocomplete="name" />
+              <span class="form-error" id="naam-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefoon">Telefoon *</label>
+              <input type="tel" id="telefoon" name="telefoon" placeholder="06 – 12 34 56 78" required autocomplete="tel" />
+              <span class="form-error" id="telefoon-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mailadres *</label>
+              <input type="email" id="email" name="email" placeholder="jan@email.nl" required autocomplete="email" />
+              <span class="form-error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="kenteken">Kenteken auto</label>
+              <input type="text" id="kenteken" name="kenteken" placeholder="AB-123-C" style="text-transform:uppercase;" maxlength="8" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dienst">Gewenste dienst *</label>
+              <select id="dienst" name="dienst" required>
+                <option value="" disabled selected>Kies een dienst...</option>
+                <option value="apk">APK Keuring</option>
+                <option value="kleine-beurt">Kleine Beurt</option>
+                <option value="grote-beurt">Grote Beurt</option>
+                <option value="reparatie">Reparatie</option>
+                <option value="airco">Airco Service</option>
+                <option value="aankoopkeuring">Aankoopkeuring</option>
+                <option value="elektrisch">Elektrisch / Hybride</option>
+                <option value="anders">Overig</option>
+              </select>
+              <span class="form-error" id="dienst-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="datum">Gewenste datum</label>
+              <input type="date" id="datum" name="datum" />
+            </div>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="opmerking">Omschrijving / opmerkingen</label>
+            <textarea id="opmerking" name="opmerking" rows="4" placeholder="Beschrijf uw probleem of wens..."></textarea>
+          </div>
+          <div class="form-group form-group--full form-group--checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="akkoord" name="akkoord" required />
+              <span class="checkbox-custom"></span>
+              Ik ga akkoord met de <a href="#" class="form-link">privacyverklaring</a> en <a href="#" class="form-link">algemene voorwaarden</a>. *
+            </label>
+            <span class="form-error" id="akkoord-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--full" id="submitBtn">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Afspraak Aanvragen</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>Bedankt! Uw aanvraag is ontvangen.</h4>
+            <p>We nemen binnen 2 uur telefonisch contact met u op om uw afspraak te bevestigen.</p>
+          </div>
+        </form>
+        <div class="appointment__info reveal-right">
+          <h3>Liever direct contact?</h3>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Bel ons</strong>
+              <a href="tel:+31201234567">020 – 123 45 67</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/31612345678">06 – 12 34 56 78</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:info@autofixpro.nl">info@autofixpro.nl</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Adres</strong>
+              <span>Garagelaan 12, 1234 AB Amsterdam</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>Openingstijden</strong>
+              <span>Ma–Vr: 08:00–18:00</span>
+              <span>Zaterdag: 09:00–14:00</span>
+              <span>Zondag: Gesloten</span>
+            </div>
+          </div>
+          <div class="appointment__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77895.48278437432!2d4.764297!3d52.3727598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!5e0!3m2!1snl!2snl!4v1699000000000"
+              width="100%"
+              height="200"
+              style="border:0;border-radius:12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="AutoFix Pro locatie">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Veelgestelde vragen</span>
+        <h2 class="section-title">Heeft u nog <span class="gradient-text">vragen?</span></h2>
+      </div>
+      <div class="faq__grid">
+        <div class="faq-item reveal-up">
+          <button class="faq-item__question" aria-expanded="false">
+            Hoe snel kan ik terecht voor een APK?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>In de meeste gevallen kunt u binnen 1–2 werkdagen terecht. Via ons online formulier of telefonisch plannen we samen een geschikt moment. Spoed? Bel ons en we kijken wat mogelijk is.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal-up">
+          <button class="faq-item__question" aria-expanded="false">
+            Welke automerken repareren jullie?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>We werken voor alle gangbare merken en modellen — Volkswagen, Ford, Toyota, BMW, Mercedes, Opel, Peugeot, Renault en meer. Ook hybride en elektrische voertuigen.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal-up">
+          <button class="faq-item__question" aria-expanded="false">
+            Geven jullie garantie op reparaties?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>Ja — alle reparaties en vervangen onderdelen krijgen 12 maanden garantie. Mocht er binnen die periode iets misgaan met de verrichte werkzaamheden, lossen we het kosteloos op.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal-up">
+          <button class="faq-item__question" aria-expanded="false">
+            Kan ik een vervangauto krijgen?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>Ja, voor grotere reparaties bieden we een leenauto aan. Beschikbaarheid is beperkt, dus vraag er tijdig naar bij het maken van uw afspraak. Vermeldt dit in het opmerkingenveld.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal-up">
+          <button class="faq-item__question" aria-expanded="false">
+            Hoe werkt de betaling?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>U kunt betalen met pin, creditcard of contant. Betaling vindt plaats bij ophalen van de auto. We sturen ook altijd een factuur per e-mail ter administratie.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal-up">
+          <button class="faq-item__question" aria-expanded="false">
+            Werken jullie ook voor zakelijke klanten?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>Zeker! We hebben speciale zakelijke tarieven en contracten voor bedrijven met een wagenpark. Neem contact op voor een maatwerkofferte en we bespreken de mogelijkheden.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg">
+      <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1920&q=80&auto=format&fit=crop" alt="Garage" loading="lazy" />
+      <div class="cta-banner__overlay"></div>
+    </div>
+    <div class="container cta-banner__content reveal-up">
+      <h2>Klaar voor professionele autoservice?</h2>
+      <p>Maak vandaag nog een afspraak en ervaar het verschil van eerlijk vakmanschap.</p>
+      <div class="cta-banner__actions">
+        <a href="#afspraak" class="btn btn--primary btn--lg">
+          <i class="fa-solid fa-calendar-check"></i>
+          Afspraak Maken
+        </a>
+        <a href="tel:+31201234567" class="btn btn--outline btn--lg">
+          <i class="fa-solid fa-phone"></i>
+          020 – 123 45 67
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="footer__logo">
+          <span class="logo__icon"><i class="fa-solid fa-gear"></i></span>
+          <div class="logo__text">
+            <span class="logo__name">AutoFix Pro</span>
+            <span class="logo__tagline">Autoreparatie & Onderhoud</span>
+          </div>
+        </a>
+        <p>Uw betrouwbare partner voor alle autoservice. Eerlijk, snel en professioneel — altijd.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="#diensten">APK Keuring</a></li>
+          <li><a href="#diensten">Onderhoud & Service</a></li>
+          <li><a href="#diensten">Reparaties</a></li>
+          <li><a href="#diensten">Airco Service</a></li>
+          <li><a href="#diensten">Elektrisch & Hybride</a></li>
+          <li><a href="#diensten">Aankoopkeuring</a></li>
+        </ul>
+      </div>
+      <div class="footer__nav">
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="#over-ons">Over Ons</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#prijzen">Tarieven</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Vacatures</a></li>
+          <li><a href="#">Zakelijk</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Garagelaan 12, 1234 AB Amsterdam</li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+31201234567">020 – 123 45 67</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@autofixpro.nl">info@autofixpro.nl</a></li>
+          <li><i class="fa-solid fa-clock"></i> Ma–Vr: 08:00–18:00</li>
+          <li><i class="fa-solid fa-clock"></i> Za: 09:00–14:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 AutoFix Pro. Alle rechten voorbehouden.</p>
+        <div class="footer__legal">
+          <a href="#">Privacyverklaring</a>
+          <a href="#">Algemene Voorwaarden</a>
+          <a href="#">Cookiebeleid</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/31612345678" class="whatsapp-float" aria-label="WhatsApp ons" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-float__tooltip">Chat via WhatsApp</span>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== MOBILE STICKY CTA ===== -->
+  <div class="mobile-cta" id="mobileCta">
+    <a href="tel:+31201234567" class="mobile-cta__btn mobile-cta__btn--call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Bellen</span>
+    </a>
+    <a href="#afspraak" class="mobile-cta__btn mobile-cta__btn--appt">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Afspraak</span>
+    </a>
+    <a href="https://wa.me/31612345678" class="mobile-cta__btn mobile-cta__btn--wa" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ===== COOKIE BANNER ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie melding">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <p>Wij gebruiken cookies voor een optimale website-ervaring en om onze diensten te verbeteren. <a href="#" class="cookie-link">Meer info</a></p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--decline" id="cookieDecline">Weigeren</button>
+        <button class="cookie-btn cookie-btn--accept" id="cookieAccept">Akkoord</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
