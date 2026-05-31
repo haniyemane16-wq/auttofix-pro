@@ -1605,24 +1605,25 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.6); cur
   .topbar { display: none; }
 
   .navbar__links {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 72px;
     left: 0;
     right: 0;
-    background: #0A0A0F;
+    background-color: #0d0d14;
+    background: #0d0d14;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     gap: 0;
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     opacity: 0;
     pointer-events: none;
-    transition: transform var(--transition-slow), opacity var(--transition-slow);
-    z-index: 999;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 2px solid var(--clr-primary);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-    padding: 8px 0 16px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    z-index: 9999;
+    border-top: 2px solid var(--clr-primary);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+    padding: 8px 0 20px;
   }
 
   .navbar__links.open {
