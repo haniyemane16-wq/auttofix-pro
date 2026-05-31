@@ -43,16 +43,28 @@ const navLinksList = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => {
   const isOpen = navLinksList.classList.toggle('open');
   navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
   navToggle.setAttribute('aria-expanded', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
+// Close menu when a link is clicked
 document.querySelectorAll('#navLinks a').forEach(link => {
   link.addEventListener('click', () => {
     navLinksList.classList.remove('open');
     navToggle.classList.remove('open');
-    document.body.style.overflow = '';
+    navToggle.setAttribute('aria-expanded', 'false');
   });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (navLinksList.classList.contains('open') &&
+      !navLinksList.contains(e.target) &&
+      !navToggle.contains(e.target)) {
+    navLinksList.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
 });
 
 /* ===== SMOOTH SCROLL (for older Safari) ===== */

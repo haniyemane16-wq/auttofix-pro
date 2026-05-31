@@ -251,6 +251,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: background var(--transition), box-shadow var(--transition);
+  /* Needed so the absolute mobile menu positions relative to navbar */
+  overflow: visible;
 }
 
 .navbar.scrolled {
@@ -387,17 +389,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   z-index: 1;
 }
 
-/* Subtle grid pattern on hero */
-.hero__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,107,0,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,107,0,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  z-index: 1;
-}
 
 .hero__content {
   position: relative;
@@ -1614,54 +1605,119 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.6); cur
   .topbar { display: none; }
 
   .navbar__links {
-    position: fixed;
-    inset: 0; top: 72px;
-    background: rgba(10,10,15,0.98);
-    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #0A0A0F;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transform: translateX(100%);
-    transition: transform var(--transition-slow);
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-slow), opacity var(--transition-slow);
     z-index: 999;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 2px solid var(--clr-primary);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    padding: 8px 0 16px;
   }
 
-  .navbar__links.open { transform: translateX(0); }
+  .navbar__links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
   .navbar__toggle { display: flex; }
 
-  .nav-link { font-size: 1.3rem; padding: 12px 24px; }
-  .btn--nav { font-size: 1.1rem; padding: 14px 32px; }
+  .nav-link {
+    font-size: 1rem;
+    padding: 14px 24px;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.9);
+  }
+  .nav-link::after { display: none; }
+  #navLinks li:last-child .btn--nav {
+    display: block;
+    margin: 12px 16px 0;
+    text-align: center;
+    font-size: 1rem;
+    padding: 14px 24px;
+  }
+  .btn--nav {
+    font-size: 1rem;
+    padding: 14px 32px;
+    width: auto;
+  }
 
   .section { padding: 64px 0; }
   .section-title { font-size: 2rem; }
+  .section-header { margin-bottom: 40px; }
 
+  /* Stats */
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .stat-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 28px 16px; }
   .stat-card:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06); }
   .stat-card:nth-last-child(-n+2) { border-bottom: none; }
+  .stat-number { font-size: 2.6rem; }
 
+  /* Grids */
   .diensten__grid { grid-template-columns: 1fr; }
   .pricing__grid  { grid-template-columns: 1fr; }
   .reviews__grid  { grid-template-columns: 1fr; }
 
+  /* Featured pricing card: reset vertical offset on mobile */
+  .pricing-card--featured { transform: none; }
+  .pricing-card--featured:hover { transform: translateY(-6px); }
+
+  /* Appointment form */
   .appointment__inner { grid-template-columns: 1fr; gap: 40px; }
-  .appointment-form { padding: 28px 20px; }
+  .appointment-form { padding: 24px 16px; }
   .form-row { grid-template-columns: 1fr; }
 
+  /* Process steps */
   .process__steps { flex-direction: column; align-items: center; gap: 16px; }
   .process-step__arrow { transform: rotate(90deg); margin-top: 0; }
+  .process-step { padding: 0 16px; width: 100%; max-width: 320px; }
 
+  /* Footer */
   .footer__inner { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom-inner { flex-direction: column; text-align: center; }
   .footer__legal { flex-wrap: wrap; justify-content: center; }
 
-  .hero__actions { flex-direction: column; }
+  /* Hero */
+  .hero__content { padding-top: 48px; padding-bottom: 100px; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { justify-content: center; }
   .hero__trust { flex-direction: column; gap: 12px; }
   .trust-divider { display: none; }
 
-  .cta-banner__actions { flex-direction: column; align-items: center; }
+  /* Why us: remove floating badge overflow on mobile */
+  .why-us__badge-float { right: 0; bottom: 0; }
 
+  /* CTA banner */
+  .cta-banner__actions { flex-direction: column; align-items: center; }
+  .cta-banner__actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+  /* Brands: tighter gap */
+  .brands__logos { gap: 20px; }
+  .brands__certs { gap: 10px; }
+
+  /* Buttons: allow wrapping on small screens */
+  .btn { white-space: normal; text-align: center; }
+
+  /* Section dark clip-path: reduce to avoid content clipping */
+  .section--dark {
+    clip-path: polygon(0 20px, 100% 0, 100% calc(100% - 20px), 0 100%);
+    margin: -20px 0;
+    padding: 100px 0;
+  }
+
+  /* Fixed elements */
   .whatsapp-float { display: none; }
   .scroll-top { bottom: 88px; right: 20px; }
   .mobile-cta { display: flex; }
@@ -1672,8 +1728,61 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.6); cur
 }
 
 @media (max-width: 480px) {
+  .container { padding: 0 16px; }
+
   .section-title { font-size: 1.75rem; }
-  .stat-number { font-size: 2.5rem; }
-  .why-us__badge-float { position: relative; bottom: auto; right: auto; margin-top: 20px; }
-  .hero__title { font-size: 2.8rem; }
+  .section-sub { font-size: 0.95rem; }
+
+  .stat-number { font-size: 2.2rem; }
+  .stat-label { font-size: 0.78rem; }
+
+  /* Hero */
+  .hero__title { font-size: 2.6rem; }
+  .hero__sub { font-size: 1rem; }
+  .hero__badge { font-size: 0.75rem; padding: 6px 14px; }
+
+  /* Why us badge: take out of flow */
+  .why-us__badge-float {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Dienst cards: more breathing room on small screens */
+  .dienst-card { padding: 28px 20px; }
+
+  /* Pricing cards */
+  .pricing-card { padding: 28px 20px; }
+  .price-amount { font-size: 2.2rem; }
+
+  /* Review cards */
+  .review-card { padding: 20px 16px; }
+
+  /* Appointment form */
+  .appointment-form { padding: 20px 14px; }
+
+  /* Form fields: bigger touch targets */
+  input, select, textarea { padding: 13px 14px; font-size: 1rem; }
+
+  /* Mobile CTA labels */
+  .mobile-cta__btn { font-size: 0.68rem; padding: 8px 6px; }
+
+  /* FAQ */
+  .faq-item__question { font-size: 0.88rem; padding: 16px 18px; }
+  .faq-item__answer { padding: 0 18px; }
+  .faq-item.open .faq-item__answer { padding: 0 18px 16px; }
+
+  /* Footer */
+  .footer__bottom-inner { gap: 8px; }
+  .footer__legal { gap: 12px; }
+
+  /* CTA banner */
+  .cta-banner { padding: 72px 0; }
+  .cta-banner__content h2 { font-size: 1.75rem; }
+  .cta-banner__content p { font-size: 0.95rem; }
+
+  /* Reviews overall */
+  .reviews__overall { flex-direction: column; gap: 6px; text-align: center; }
 }
